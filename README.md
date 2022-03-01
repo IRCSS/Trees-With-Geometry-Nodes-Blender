@@ -42,12 +42,12 @@ Then I distort the spline based on a noise to give it a more organic look. There
 Next is the creation of branches. The whole branch creation is fully procedural based on spline, and the function has a few nodes in it: 
 ![](documentation/Branches.jpg)
 
-The main idea of the group is to use instances on Points on the trunk spline (or any spline, you can use the Branches node to spawn branches on branches on branches), to spawn a bunch of new splines, which get oriented, scaled and distorted in a way to resemble branches. I wont get in to the detail of distortation and determining branch thickness since we already covered those (only difference with thickness is that you take the thickness of the point the spline was spawned on as begining thickness). 
+The main idea of the group is to use instances on Points on the trunk spline (or any spline, you can use the Branches node to spawn branches on branches on branches), to spawn a bunch of new splines, which get oriented, scaled and distorted in a way to resemble branches. I wont get in to the detail of distortion and determining branch thickness since we already covered those (only difference with thickness is that you take the thickness of the point the spline was spawned on as begining thickness). 
 
 The first part is capturing all the different curve attributes at the begining to use for calculation. Also branches usually dont pop up everywhere on the trunk, but at a certain height. Here I am using the height of the mother spline to determine at which point branches should start poping up. 
 ![](documentation/CalculatingDensityAndCappingAtWhichPointBranchesStart.jpg)
 
-Next is determining the branch alignment. If you have ever noticed, branches only grow in the direction of the light. This mean when we place our spline, we should make sure it is at the very least pointing upward-ish. To achieve this, after randomizing the normal of the curve at the spawn point, I project it on the xy plane. Then doing some cross product I tilt thse up by a random value. 
+Next is determining the branch alignment. If you have ever noticed, branches only grow in the direction of the light. This mean when we place our spline, we should make sure it is at the very least pointing upward-ish. To achieve this, after randomizing the normal of the curve at the spawn point, I project it on the xy plane. Then doing some cross product I tilt these up by a random value. 
 
 ![](documentation/BranchAlingment.jpg)
 
