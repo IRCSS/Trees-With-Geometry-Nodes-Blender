@@ -13,6 +13,11 @@ You can also draw the trees yourself using the curve tool!
 
 You can also see the node in used for this model here: https://skfb.ly/osLOY
 
+Newly added, I also adde a generator for an autom forest, with procedural material for the woods, and randomized colors for the trees: 
+![](documentation/RandomizedTree4.jpg)
+![](documentation/RandomizeTree3.jpg)
+![](documentation/RandomizedTrees.jpg)
+![](documentation/RandomizeTree2.jpg)
 ---------
 KNOWN ISSUES
 --
